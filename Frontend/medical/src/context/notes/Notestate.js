@@ -13,8 +13,11 @@ const Notestate = (props) => {
             },
         });
         const json = await response.json();
-        setrecords([json]);
         
+        // changing state will make evrything reload
+        // setrecords([json]);
+
+        return json
     }
 
     const addnote = async (name, sickdate, recoverdate, note) => {
@@ -36,6 +39,7 @@ const Notestate = (props) => {
         //     "__v": 0
         // }
         setrecords([records.concat()]);
+        
     }
     return (
         <div>

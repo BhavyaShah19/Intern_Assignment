@@ -11,8 +11,8 @@ const Addnote = (props) => {
         note: ""
     });
 
-    const handleclick = (e) => {
-        e.preventDefault();
+
+    const handleclick = () => {
         addnote(records.name,records.sickdate,records.recoverdate,records.note);
     }
 
@@ -22,7 +22,7 @@ const onchange = (e) => {
 return (
     <div>
         <div className="container" style={{ 'marginTop': '4rem' }}>
-            <h1>Add a Note</h1>
+            <h1>Add Your Record</h1>
             <form>
                 <div className="form-group">
                     <label htmlFor="name">Disease-Name</label>
@@ -65,12 +65,12 @@ return (
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="notes">Enter Notes if you want</label>
+                    <label htmlFor="note">Enter Notes if you want</label>
                     <input
                         type="text"
                         className="form-control"
-                        id="notes"
-                        name="notes"
+                        id="note"
+                        name="note"
                         minLength={5}
                         required
                         placeholder="Enter notes if you want"
